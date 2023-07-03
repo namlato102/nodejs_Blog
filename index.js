@@ -5,8 +5,10 @@ const port = 3000
 
 app.use(morgan('combined'))
 
-app.get('/trang-chu', (req, res) => { // get('/trang chu') dinh nghia tuyen duong
-  res.send('Hello World!')
+app.get('/', (req, res) => { // get('/trang chu') dinh nghia tuyen duong
+  res.send(
+    <h1>Hello World!</h1>
+  );
 })
 
 //127.0.0.1 localhost

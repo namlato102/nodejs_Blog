@@ -1,0 +1,31 @@
+{
+  "name": "nodejsworkspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namlato102/nodejs_Blog.git"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "nodejs_Blog"
+  ],
+  "author": "namlato102",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namlato102/nodejs_Blog/issues"
+  },
+  "homepage": "https://github.com/namlato102/nodejs_Blog#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

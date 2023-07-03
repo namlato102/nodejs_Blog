@@ -1,16 +1,21 @@
+const path = require('path')
 const express = require('express')
 const morgan = require('morgan')
-const handlebars = require('express_handlebars') //template engine
+const handlebars = require('express-handlebars') ;
 const app = express()
 const port = 3000
 
+//HTTP logger
 app.use(morgan('combined'));
 
-app.engine('handlebars', handlebars()); //dinh nghia
+//Template Engine
+app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars'); // xet view engine = handlebars
+app.set('views', path.join(__dirname, 'resources/views'));
+app.use(express.static('views'));
 
 app.get('/', (req, res) => { // get('/trang chu') dinh nghia tuyen duong
-    res.send("<h1>Hello World!</h1>");
+    res.render('home');
 })
 
 //127.0.0.1 localhost
